@@ -1,6 +1,7 @@
 import { Stack } from "@mui/material"
 import { Link } from "react-router-dom"
-// import { logo } from "../utils/constants"
+import { logo } from "../utils/constants"
+import { SearchBar } from "."
 
 const Navbar = () => (
   <Stack
@@ -30,6 +31,7 @@ const Navbar = () => (
           d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
       </svg>
     </Link>
+    <SearchBar/>
   </Stack>
 )
 export default Navbar
