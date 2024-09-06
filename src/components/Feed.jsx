@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { Box, Stack, Typography } from "@mui/material"
+import Sidebar from "./Sidebar"
 
 const Feed = () => {
 
@@ -23,7 +24,7 @@ const Feed = () => {
             md: 2
           }
         }} >
-        Sidebar
+        <Sidebar/>
 
         <Typography
           className="copyright"
