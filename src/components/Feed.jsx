@@ -24,8 +24,7 @@ const Feed = () => {
             md: 2
           }
         }} >
-        <Sidebar/>
-
+        <Sidebar />
         <Typography
           className="copyright"
           variant="body2"
@@ -34,6 +33,26 @@ const Feed = () => {
             color: "#fff"
           }}>
           Copyright 2024 @ MS Tube
+        </Typography>
+      </Box>
+      <Box
+        p={2}
+        sx={{
+          height: "90vh",
+          flex: 2,
+          overflowY: "auto"
+        }}>
+        <Typography
+          variant="h4"
+          fontWeight="bold" mb={2}
+          sx={{
+            color: "#fff"
+          }}>
+          New <span style={{
+            color: "#f31503"
+          }}>
+            Videos
+          </span>
         </Typography>
       </Box>
     </Stack>
