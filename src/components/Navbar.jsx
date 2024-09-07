@@ -5,20 +5,28 @@ import { SearchBar } from "."
 
 const Navbar = () => (
   <Stack
-    sx={{ position: "sticky", background: "#000", top: 0, justifyContent: "space-between" }}
+    sx={{
+      position: "sticky",
+      background: "#000",
+      top: 0,
+      justifyContent: "space-between"
+    }}
     direction="row"
     alignItems="center"
     p={2}>
     <Link
-      style={{ display: "flex", alignItems: "center" }}
+      style={{ 
+        display: "flex", 
+        alignItems: "center" 
+      }}
       to="/">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        fill="none" 
+        fill="none"
         width="50"
         height="50"
         viewBox="0 0 24 24"
-        strokeWidth={1.5} 
+        strokeWidth={1.5}
         stroke="red"
         className="">
         <path
@@ -31,7 +39,7 @@ const Navbar = () => (
           d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
       </svg>
     </Link>
-    <SearchBar/>
+    <SearchBar />
   </Stack>
 )
 export default Navbar
