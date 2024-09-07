@@ -4,6 +4,11 @@ import { Sidebar, Videos } from "./"
 import {fetchFromAPI} from "../utils/fetchFromAPI"
 
 const Feed = () => {
+  const [selectedCategory, setSelectedCategory] = useState("New"); 
+  
+  useEffect(() => {
+    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
+  }, []);
 
   return (
     <Stack
@@ -16,7 +21,7 @@ const Feed = () => {
           borderRight: "1px solid #3d3d3d",
           px: { sx: 0, md: 2 }
         }} >
-        <Sidebar />
+        <Sidebar  />
         <Typography
           className="copyright"
           variant="body2"
