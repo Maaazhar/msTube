@@ -1,8 +1,8 @@
 import { Stack } from "@mui/material"
 import { categories } from "../utils/constants"
 
-const selectedCategory = "New";
-const Sidebar = () => (
+// eslint-disable-next-line react/prop-types
+const Sidebar = ({ selectedCategory, setSelectedCategory }) => (
   <div>
     <Stack
       direction="row"
@@ -14,6 +14,7 @@ const Sidebar = () => (
       {categories.map((category, i) => (
         <button
           key={i}
+          onClick={() => setSelectedCategory(category.name)}
           className="category-btn"
           style={{
             background: category.name === selectedCategory && "#fc1503",
