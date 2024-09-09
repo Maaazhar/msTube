@@ -9,7 +9,7 @@ const VideoCard = ({ video: { id: { videoId }, snippet } }) => {
 
   return (
     <Card sx={{
-      width: {md: "320px", sx: "100%"},
+      width: { xs: '100%', sm: '358px', md: "320px" },
       borderRadius: 0,
       boxShadow: "none"
     }}>
