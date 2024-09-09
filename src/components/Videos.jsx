@@ -1,8 +1,8 @@
 import { Box, Stack } from "@mui/material";
+import { ChannelCard, VideoCard } from "./";
 
 // eslint-disable-next-line react/prop-types
 const Videos = ({ videos }) => {
-  console.log(videos);
 
   return (
     <Stack
@@ -10,10 +10,10 @@ const Videos = ({ videos }) => {
       flexWrap="wrap"
       justifyContent="start"
       gap={2}>
-      {videos.map((index, item) => (
+      {videos.map((item, index) => (
         <Box key={index}>
-          {item.id.channelId && <ChannelCard channel={item}/>}
-          {item.id.videoId && <VideoCard video={item}/>}
+          {item.id.videoId && <VideoCard video={item} />}
+          {item.id.channelId && <ChannelCard channel={item} />}
         </Box>
       ))}
     </Stack>
