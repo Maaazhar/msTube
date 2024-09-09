@@ -1,7 +1,7 @@
+/* eslint-disable react/prop-types */
 import { Box, Stack } from "@mui/material";
 import { ChannelCard, VideoCard } from "./";
 
-// eslint-disable-next-line react/prop-types
 const Videos = ({ videos }) => {
 
   return (
