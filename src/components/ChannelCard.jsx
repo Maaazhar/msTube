@@ -4,7 +4,7 @@ import { Box, CardContent, CardMedia, Typography } from "@mui/material"
 import { demoProfilePicture } from "../utils/constants"
 import { Link } from "react-router-dom";
 
-const ChannelCard = ({ channel }) => {
+const ChannelCard = ({ channel, marginTop }) => {
   console.log(channel);
 
   return (
@@ -12,6 +12,7 @@ const ChannelCard = ({ channel }) => {
       width: { xs: '100%', sm: '358px', md: "320px" },
       height: "326px",
       margin: "auto",
+      marginTop,
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
@@ -26,16 +27,22 @@ const ChannelCard = ({ channel }) => {
           textAlign: "center",
           color: "#fff"
         }}>
-          <CardMedia
-            image={channel?.snippet?.thumbnails?.high?.url || demoProfilePicture}
-            alt={channel?.snippet?.title}
-            sx={{
-              width: 180,
-              height: 180,
-              mb: 2,
-              border: "1px solid #e3e3e3",
-              borderRadius: "50%"
-            }} />
+          <Box sx={{
+            p: 1.5,
+            background: "#000",
+            borderRadius: "50%"
+          }}>
+            <CardMedia
+              image={channel?.snippet?.thumbnails?.high?.url || demoProfilePicture}
+              alt={channel?.snippet?.title}
+              sx={{
+                width: 180,
+                height: 180,
+                mb: 2,
+                border: "1px solid #e3e3e3",
+                borderRadius: "50%"
+              }} />
+          </Box>
           <Typography
             variant="subtitle"
             fontWeight="bold"
