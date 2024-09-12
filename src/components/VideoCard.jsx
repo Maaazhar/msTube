@@ -5,7 +5,7 @@ import { demoThumbnailUrl, demoChannelTitle, demoChannelUrl, demoVideoUrl, demoV
 import { Link } from "react-router-dom";
 
 const VideoCard = ({ video: { id: { videoId }, snippet } }) => {
-  console.log(snippet);
+  // console.log(snippet);
 
   return (
     <Card sx={{

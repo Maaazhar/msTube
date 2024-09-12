@@ -26,7 +26,7 @@ const SearchFeed = () => {
         sx={{
           color: "#fff"
         }}>
-        Search result for: <span style={{
+        Search result for <span style={{
           color: "#f31503"
         }}>{searchTerm}</span>
       </Typography>
