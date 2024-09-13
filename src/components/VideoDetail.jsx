@@ -23,7 +23,7 @@ const VideoDetail = () => {
 
   // const { snippet: { title, channelId, channelTitle }, statistics: { viewCount, likeCount } } = videoDetail;
 
-  
+
   return (
     <Box minHeight="95vh">
       <Stack direction={{ xs: "column", md: "row" }}>
@@ -34,6 +34,14 @@ const VideoDetail = () => {
             top: "86px"
           }}>
             <ReactPlayer url={`https://www.youtube.com/watch?v=${id}`} className="react-player" controls />
+            <Typography
+              variant="h5"
+              p={2}
+              color="#fff"
+              fontWeight="300">
+              {videoDetail?.snippet.title}
+              {/* {title} */}
+            </Typography>
           </Box>
         </Box>
       </Stack>
