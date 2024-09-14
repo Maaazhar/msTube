@@ -8,7 +8,7 @@ import { fetchFromAPI } from "../utils/fetchFromAPI"
 
 const VideoDetail = () => {
   const [videoDetail, setVideoDetail] = useState(null);
-  const [videos, setVideos] = useState(null);
+  const [recommendedVideos, setRecommendedVideos] = useState(null);
   const { id } = useParams();
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const VideoDetail = () => {
       .then((data) => setVideoDetail(data.items[0]))
 
     fetchFromAPI(`search?part=snippet&relatedToVideoId=${id}&type=video`)
-      .then((data) => setVideos(data.items))
+      .then((data) => setRecommendedVideos(data.items))
   }, [id]);
 
   if (!videoDetail?.snippet) return "Loading...";
@@ -31,8 +31,7 @@ const VideoDetail = () => {
           <Box sx={{
             width: "100%",
             position: "sticky",
-            top: "86px"
-          }}>
+            top: "86px" }}>
             <ReactPlayer url={`https://www.youtube.com/watch?v=${id}`} className="react-player" controls />
             <Typography
               variant="h5"
@@ -77,6 +76,15 @@ const VideoDetail = () => {
               </Stack>
             </Stack>
           </Box>
+        </Box>
+        <Box
+          px={2}
+          py={{ md: 1, xs: 5 }}
+          justifyContent="center"
+          alignItems="center" >
+          <Videos
+            videos={recommendedVideos}
+            direction="column" />
         </Box>
       </Stack>
     </Box>
