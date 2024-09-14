@@ -32,7 +32,10 @@ const VideoDetail = () => {
             width: "100%",
             position: "sticky",
             top: "86px" }}>
-            <ReactPlayer url={`https://www.youtube.com/watch?v=${id}`} className="react-player" controls />
+            <ReactPlayer 
+            url={`https://www.youtube.com/watch?v=${id}`} 
+            className="react-player" 
+            controls />
             <Typography
               variant="h5"
               p={2}
