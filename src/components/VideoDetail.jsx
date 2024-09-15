@@ -31,16 +31,26 @@ const VideoDetail = () => {
           <Box sx={{
             width: "100%",
             position: "sticky",
-            top: "86px" }}>
-            <ReactPlayer 
-            url={`https://www.youtube.com/watch?v=${id}`} 
-            className="react-player" 
-            controls />
+            top: "86px"
+          }}>
+            <ReactPlayer
+              url={`https://www.youtube.com/watch?v=${id}`}
+              className="react-player"
+              controls />
             <Typography
               variant="h5"
-              p={2}
+              p={0.5}
               color="#fff"
-              fontWeight="300">
+              fontWeight="300"
+              sx={{
+                display: '-webkit-box',
+                mt: "10px",
+                ml: "10px",
+                textOverflow: 'ellipsis',
+                WebkitLineClamp: '1',
+                WebkitBoxOrient: 'vertical',
+                overflow: 'hidden',
+              }}>
               {title}
             </Typography>
             <Stack
@@ -89,8 +99,8 @@ const VideoDetail = () => {
             videos={recommendedVideos}
             direction="column" />
         </Box>
-      </Stack>
-    </Box>
+      </Stack >
+    </Box >
   )
 }
 
