@@ -10,7 +10,8 @@ const Videos = ({ videos, direction }) => {
       direction={direction || "row"}
       flexWrap="wrap"
       justifyContent="center"
-      gap={3}>
+      // gap={3}
+      >
       {videos?.map((item, index) => (
         <Box key={index}>
           {item.id.videoId && <VideoCard video={item} />}
