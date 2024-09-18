@@ -11,13 +11,14 @@ const ChannelCard = ({ channel, marginTop, marginInline }) => {
     <Box sx={{
       width: { xs: '100%', sm: '358px', md: "320px" },
       height: "326px",
-      mt: marginTop,
-      marginInline: marginInline,
-      mb: "10px",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      borderRadius: "0",
+      mt: marginTop,
+      marginInline: marginInline,
+      mb: "10px",
+      borderRadius: "5px",
+      background: "#1e1e1e",
       boxShadow: "none"
     }}>
       <Link to={`/channel/${channel?.id?.channelId || channel?.id}`}>
@@ -29,7 +30,11 @@ const ChannelCard = ({ channel, marginTop, marginInline }) => {
           color: "#fff"
         }}>
           <Box sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
             p: 1.5,
+            mb: 2,
             background: "#000",
             borderRadius: "50%"
           }}>
@@ -39,7 +44,6 @@ const ChannelCard = ({ channel, marginTop, marginInline }) => {
               sx={{
                 width: 180,
                 height: 180,
-                mb: 2,
                 border: "1px solid #e3e3e3",
                 borderRadius: "50%"
               }} />
