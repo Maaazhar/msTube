@@ -11,12 +11,12 @@ const ChannelCard = ({ channel, marginTop }) => {
     <Box sx={{
       width: { xs: '100%', sm: '358px', md: "320px" },
       height: "326px",
+      mt: marginTop,
       margin: "auto",
-      marginTop,
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      borderRadius: "20px",
+      borderRadius: "0",
       boxShadow: "none"
     }}>
       <Link to={`/channel/${channel?.id?.channelId || channel?.id}`}>
