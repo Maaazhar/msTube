@@ -4,7 +4,7 @@ import { Box, CardContent, CardMedia, Typography } from "@mui/material"
 import { demoProfilePicture } from "../utils/constants"
 import { Link } from "react-router-dom";
 
-const ChannelCard = ({ channel, marginTop }) => {
+const ChannelCard = ({ channel, marginTop, marginInline }) => {
   channel?.statistics && console.log("ChannelCard:", channel);
 
   return (
@@ -12,7 +12,8 @@ const ChannelCard = ({ channel, marginTop }) => {
       width: { xs: '100%', sm: '358px', md: "320px" },
       height: "326px",
       mt: marginTop,
-      margin: "auto",
+      marginInline: marginInline,
+      mb: "10px",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
