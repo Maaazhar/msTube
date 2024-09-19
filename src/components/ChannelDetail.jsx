@@ -34,10 +34,10 @@ const ChannelDetail = () => {
           marginInline="auto"
           background="none" />
       </Box>
-      <Box display="flex" p="2" >
-        <Box sx={{
+      <Box display="flex" p="2" sx={{ p: "2px", }} >
+        {/* <Box sx={{
           mr: { sm: "100px" }
-        }} />
+        }} /> */}
         <Videos videos={videos} />
       </Box>
     </Box>
