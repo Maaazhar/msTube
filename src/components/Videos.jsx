@@ -18,8 +18,7 @@ const Videos = ({ videos, direction }) => {
           {item.id.channelId && <ChannelCard 
           channel={item} 
           marginTop="10px" 
-          marginInline="10px"
-          background="#1e1e1e"/>}
+          marginInline="10px"/>}
         </Box>
       ))}
     </Stack>

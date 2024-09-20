@@ -12,10 +12,16 @@ const VideoCard = ({ video: { id: { videoId }, snippet } }) => {
       sx={{
         width: { xs: '100%', sm: '358px', md: "320px" },
         m: "10px",
-        borderRadius: "5px",
         background: "#1e1e1e",
         boxShadow: "none",
         boxSizing: "border-box",
+        border: "1px solid #000",
+        borderRadius: "5px",
+        transition: "all 0.5s ease-in-out",
+        '&:hover': {
+          border: "1px solid #1e1e1e",
+          transform: "scale(1.035)",
+        }
       }}>
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl} >
         <CardMedia
