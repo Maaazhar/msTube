@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
 import { CheckCircle } from "@mui/icons-material"
-import { Card, CardContent, CardMedia, Typography } from "@mui/material"
+import { Card, CardContent, CardMedia, Stack, Typography } from "@mui/material"
 import { demoThumbnailUrl, demoChannelTitle, demoChannelUrl, demoVideoUrl, demoVideoTitle } from "../utils/constants"
 import { Link } from "react-router-dom";
 
 const VideoCard = ({ video: { id: { videoId }, snippet } }) => {
-  // console.log(snippet);
+  console.log(snippet);
 
   return (
     <Card
@@ -47,9 +47,20 @@ const VideoCard = ({ video: { id: { videoId }, snippet } }) => {
         </Link>
         <Link to={snippet?.channelId ? `/channel/${snippet?.channelId}` : demoChannelUrl} >
           <Typography
-            variant="subtitle2"
+            variant="subtitle1"
             fontWeight="bold"
-            color="gray">
+            color="gray"
+            mt={1}
+            sx={{
+              width: "fit-content",
+              p: "0px 4px",
+              borderRadius: "3px",
+              transition: "all 0.3s ease-in-out",
+              '&:hover': {
+                background: "white",
+                color: "#2a1010"
+              }
+            }}>
             {snippet?.channelTitle || demoChannelTitle}
             <CheckCircle sx={{
               ml: "5px",
@@ -58,6 +69,21 @@ const VideoCard = ({ video: { id: { videoId }, snippet } }) => {
             }} />
           </Typography>
         </Link>
+        <Stack
+          direction="row"
+          gap="20px"
+          alignItems="center">
+          <Typography
+            variant="body1"
+            sx={{ opacity: 0.7 }}>
+            {/* {parseInt(viewCount).toLocaleString()} views */}
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{ opacity: 0.7 }}>
+            {/* {parseInt(likeCount).toLocaleString()} likes */}
+          </Typography>
+        </Stack>
       </CardContent>
     </Card>
   )
