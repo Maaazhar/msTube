@@ -34,7 +34,7 @@ const VideoCard = ({ video: { id: { videoId }, snippet } }) => {
           }} />
       </Link>
       <CardContent sx={{
-        height: "106px",
+        height: "80px",
         // background: "#1e1e1e"
       }}>
         <Link to={videoId ? `/video/${videoId}` : demoVideoUrl} >
@@ -45,7 +45,8 @@ const VideoCard = ({ video: { id: { videoId }, snippet } }) => {
             {snippet?.title.slice(0, 60) || demoVideoTitle.slice(0, 60)}
           </Typography>
         </Link>
-        <Link to={snippet?.channelId ? `/channel/${snippet?.channelId}` : demoChannelUrl} >
+        <Link to={snippet?.channelId ? `/channel/${snippet?.channelId}` : demoChannelUrl}
+          sx={{ width: "fit-content", border:"1px solid red", }}>
           <Typography
             variant="subtitle1"
             fontWeight="bold"
@@ -57,8 +58,8 @@ const VideoCard = ({ video: { id: { videoId }, snippet } }) => {
               borderRadius: "3px",
               transition: "all 0.3s ease-in-out",
               '&:hover': {
-                background: "white",
-                color: "#2a1010"
+                background: "#2e2e2e",
+                color: "#bbb"
               }
             }}>
             {snippet?.channelTitle || demoChannelTitle}
