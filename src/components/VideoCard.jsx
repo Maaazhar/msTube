@@ -12,15 +12,15 @@ const VideoCard = ({ video: { id: { videoId }, snippet } }) => {
       sx={{
         width: { xs: '100%', sm: '358px', md: "320px" },
         m: "10px",
-        background: "#1e1e1e",
+        background: "#0a0a0a",
         boxShadow: "none",
         boxSizing: "border-box",
-        border: "1px solid #000",
-        borderRadius: "5px",
-        transition: "all 0.5s ease-in-out",
+        border: "1px solid #99999955",
+        borderRadius: "10px",
+        transition: "all 0.3s ease-in-out",
         '&:hover': {
+          background: "#1e1e1e",
           border: "1px solid #1e1e1e",
-          transform: "scale(1.035)",
         }
       }}>
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl} >
