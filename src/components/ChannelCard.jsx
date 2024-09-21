@@ -4,23 +4,24 @@ import { Box, CardContent, CardMedia, Typography } from "@mui/material"
 import { demoProfilePicture } from "../utils/constants"
 import { Link } from "react-router-dom";
 
-const ChannelCard = ({ channel, marginTop, marginInline, background, hover }) => {
+const ChannelCard = ({ channel, marginTop, marginInline, background, border, hover }) => {
   channel?.statistics && console.log("ChannelCard:", channel);
 
   return (
     <Box sx={{
       width: { xs: '100%', sm: '358px', md: "320px" },
-      height: "326px",
+      height: "300px",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
       mt: marginTop,
       marginInline: marginInline,
       mb: "10px",
-      borderRadius: "5px",
       background: background,
+      border: border,
+      borderRadius: "5px",
       boxShadow: "none",
-      transition: "all 0.5s ease-in-out",
+      transition: "all 0.3s ease-in-out",
       '&:hover': hover,
     }}>
       <Link to={`/channel/${channel?.id?.channelId || channel?.id}`}>

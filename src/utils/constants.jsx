@@ -41,6 +41,6 @@ export const demoChannelTitle = 'JavaScript Mastery';
 export const demoVideoTitle = 'Build and Deploy 5 JavaScript & React API Projects in 10 Hours - Full Course | RapidAPI';
 export const demoProfilePicture = 'http://dergipark.org.tr/assets/app/images/buddy_sample.png';
 export const hover = {
+  background: "#1e1e1e",
   border: "1px solid #1e1e1e",
-  transform: "scale(1.035)",
 };

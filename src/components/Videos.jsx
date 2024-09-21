@@ -21,7 +21,8 @@ const Videos = ({ videos, direction }) => {
             channel={item}
             marginTop="10px"
             marginInline="10px"
-            background="#1e1e1e"
+            background="#0a0a0a"
+            border="1px solid #99999955"
             hover={hover} />}
         </Box>
       ))}
