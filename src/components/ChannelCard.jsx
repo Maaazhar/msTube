@@ -60,7 +60,15 @@ const ChannelCard = ({ channel, marginTop, marginInline, background, border, hov
               justifyContent: "center",
               alignItems: "center",
               textAlign: "center",
-              fontSize: "20px"
+              fontSize: "20px",
+              width: "fit-content",
+              p: "0px 4px",
+              borderRadius: "3px",
+              transition: "all 0.3s ease-in-out",
+              '&:hover': {
+                background: "#2e2e2e",
+                color: "#bbb"
+              }
             }}>
             {channel?.snippet?.title}
             <CheckCircle sx={{
