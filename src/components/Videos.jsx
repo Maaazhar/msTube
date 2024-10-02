@@ -20,7 +20,7 @@ const Videos = ({ videos, direction }) => {
           {item.id.channelId && <ChannelCard
             channel={item}
             marginTop="10px"
-            marginInline="10px"
+            marginInline={{xs:"0px", sm : "10px", md : "10px"}}
             background="#0a0a0a"
             border="1px solid #99999955"
             hover={hover} />}

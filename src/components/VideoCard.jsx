@@ -10,8 +10,8 @@ const VideoCard = ({ video: { id: { videoId }, snippet } }) => {
   return (
     <Card
       sx={{
-        width: { xs: '100%', sm: '358px', md: "320px" },
-        mx: {sm : "10px", md : "10px"},
+        width: { xs: '90vw', sm: '45vw', md: "320px" },
+        mx: {xs:"0px", sm : "10px", md : "10px"},
         // mx: "10px",
         my: "10px",
         background: "#0a0a0a",
@@ -31,8 +31,8 @@ const VideoCard = ({ video: { id: { videoId }, snippet } }) => {
           alt={snippet?.title}
           sx={{
             width: { xs: '100%', sm: '358px', md: "320px" },
-            height: 180,
-
+            height: {xs: "160px", sm: "180px"},
+            objectFit: "cover"
           }} />
       </Link>
       <CardContent sx={{

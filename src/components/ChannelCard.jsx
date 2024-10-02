@@ -9,7 +9,7 @@ const ChannelCard = ({ channel, marginTop, marginInline, background, border, hov
 
   return (
     <Box sx={{
-      width: { xs: '100%', sm: '358px', md: "320px" },
+      width: { xs: '90vw', sm: '45vw', md: "320px" },
       height: "300px",
       display: "flex",
       justifyContent: "center",
