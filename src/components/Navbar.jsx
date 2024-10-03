@@ -9,15 +9,16 @@ const Navbar = () => (
       position: "sticky",
       background: "#000",
       top: 0,
-      justifyContent: "space-between"
+      justifyContent: "space-between",
+      zIndex: "10",
     }}
     direction="row"
     alignItems="center"
     p={2}>
     <Link
-      style={{ 
-        display: "flex", 
-        alignItems: "center" 
+      style={{
+        display: "flex",
+        alignItems: "center"
       }}
       to="/msTube/">
       <svg

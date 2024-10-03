@@ -12,7 +12,6 @@ const VideoCard = ({ video: { id: { videoId }, snippet } }) => {
       sx={{
         width: { xs: '90vw', sm: '45vw', md: "320px" },
         mx: {xs:"0px", sm : "10px", md : "10px"},
-        // mx: "10px",
         my: "10px",
         background: "#0a0a0a",
         boxShadow: "none",
@@ -36,15 +35,26 @@ const VideoCard = ({ video: { id: { videoId }, snippet } }) => {
           }} />
       </Link>
       <CardContent sx={{
-        height: "80px",
+        height: "70px",
+        px:"5px",
         // background: "#1e1e1e"
       }}>
         <Link to={videoId ? `/video/${videoId}` : demoVideoUrl} >
           <Typography
-            variant="subtitle"
             fontWeight="bold"
-            color="#fff">
-            {snippet?.title.slice(0, 60) || demoVideoTitle.slice(0, 60)}
+            color="#fff"
+            sx={{
+              width: "fit-content",
+              p: "0px 4px",
+              borderRadius: "3px",
+              transition: "all 0.3s ease-in-out",
+              textTransform: "capitalize",
+              '&:hover': {
+                background: "#2e2e2e",
+                color: "#ddd"
+              }
+            }}>
+            {snippet?.title.slice(0, 60).toLowerCase() || demoVideoTitle.slice(0, 60)}
           </Typography>
         </Link>
         <Link to={snippet?.channelId ? `/channel/${snippet?.channelId}` : demoChannelUrl}
@@ -58,13 +68,14 @@ const VideoCard = ({ video: { id: { videoId }, snippet } }) => {
               width: "fit-content",
               p: "0px 4px",
               borderRadius: "3px",
+              textTransform: "capitalize",
               transition: "all 0.3s ease-in-out",
               '&:hover': {
                 background: "#2e2e2e",
                 color: "#bbb"
               }
             }}>
-            {snippet?.channelTitle || demoChannelTitle}
+            {snippet?.channelTitle.slice(0, 35).toLowerCase() || demoChannelTitle}
             <CheckCircle sx={{
               ml: "5px",
               fontSize: 12,

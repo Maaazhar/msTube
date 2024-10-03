@@ -6,6 +6,7 @@ import { fetchFromAPI } from "../utils/fetchFromAPI"
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState("New");
   const [videos, setVideos] = useState([]);
+  const currentYear = new Date().getFullYear();
 
   useEffect(() => {
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
@@ -15,10 +16,13 @@ const Feed = () => {
   return (
     <Stack
       sx={{
+        position: "relative",
         flexDirection: { sx: "column", md: "row" }
       }} >
       <Box
         sx={{
+          position: "sticky",
+          top: "0",
           height: { sx: "auto", md: "fit" },
           borderRight: "1px solid #3d3d3d",
           px: { sx: 0,  }
@@ -30,10 +34,12 @@ const Feed = () => {
           className="copyright"
           variant="body2"
           sx={{
-            mt: 1.5,
-            color: "#fff"
+            mx: 0.5,
+            my: 3,
+            color: "#aaaaaaa5",
+            textAlign: "center",
           }}>
-          Copyright 2024 @ MS Tube
+          Copyright 2024 - {currentYear} <br /> @ msTube
         </Typography>
       </Box>
       <Box
@@ -47,7 +53,8 @@ const Feed = () => {
           variant="h4"
           fontWeight="bold" mb={2}
           sx={{
-            color: "#fff"
+            color: "#fff",
+            textAlign: "center",
           }}>
           {selectedCategory} <span style={{
             color: "#f31503"
