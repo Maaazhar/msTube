@@ -25,7 +25,7 @@ const Feed = () => {
           top: "0",
           height: { sx: "auto", md: "fit" },
           borderRight: "1px solid #3d3d3d",
-          px: { sx: 0,  }
+          px: { sx: 0, }
         }} >
         <Sidebar
           selectedCategory={selectedCategory}
@@ -39,7 +39,26 @@ const Feed = () => {
             color: "#aaaaaaa5",
             textAlign: "center",
           }}>
-          Copyright 2024 - {currentYear} <br /> @ msTube
+          Copyright 2024 - {currentYear}
+          <br /> @ msTube.
+          <br /> Design & Development
+          <br /> by <Typography
+          variant="body2"
+          sx={{
+            display: "inline",
+            color: "aaaaaaa5",
+            '&:hover': {
+                color: "red"
+              }
+          }}>
+            <a
+              style={{
+                color: "inherit"
+              }}
+              target="_blank"
+              href="https://mazharul-islam.web.app/">
+              Mazharul Islam</a>
+          </Typography>
         </Typography>
       </Box>
       <Box
