@@ -19,7 +19,7 @@ const Navbar = () => (
         display: "flex", 
         alignItems: "center" 
       }}
-      to="/">
+      to="/msTube/">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
