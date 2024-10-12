@@ -7,9 +7,10 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => (
     <Stack
       direction="row"
       sx={{
-        overflowY: "auto",
         height: { sx: "auto", md: "95%" },
+        px: "10px",
         flexDirection: { md: "column" },
+        overflowY: "auto",
         zIndex: "1",
       }}>
       {categories.map((category, i) => (

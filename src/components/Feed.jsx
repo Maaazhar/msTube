@@ -17,6 +17,7 @@ const Feed = () => {
     <Stack
       sx={{
         position: "relative",
+        alignItems: "start",
         flexDirection: { sx: "column", md: "row" }
       }} >
       <Box
@@ -38,6 +39,7 @@ const Feed = () => {
             my: 3,
             color: "#aaaaaaa5",
             textAlign: "center",
+            overflow: "auto",
           }}>
           Copyright 2024 - {currentYear}
           <br /> @ msTube.
@@ -64,7 +66,7 @@ const Feed = () => {
       <Box
         p={2}
         sx={{
-          height: "90vh",
+          // height: "90vh",
           flex: 2,
           overflowY: "auto"
         }}>
