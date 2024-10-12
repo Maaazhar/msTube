@@ -24,9 +24,10 @@ const Feed = () => {
         sx={{
           position: "sticky",
           top: "0",
+          px: { sx: 0, },
           height: { sx: "auto", md: "fit" },
           borderRight: "1px solid #3d3d3d",
-          px: { sx: 0, }
+          overflowY: "auto",
         }} >
         <Sidebar
           selectedCategory={selectedCategory}
