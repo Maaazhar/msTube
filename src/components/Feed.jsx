@@ -25,7 +25,7 @@ const Feed = () => {
           position: "sticky",
           top: "0",
           px: { sx: 0, },
-          height: { sx: "auto", md: "fit" },
+          height: { sx: "auto", md: "100%" },
           borderRight: "1px solid #3d3d3d",
           overflowY: "auto",
         }} >
