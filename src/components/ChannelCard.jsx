@@ -61,7 +61,7 @@ const ChannelCard = ({ channel, marginTop, marginInline, background, border, hov
               alignItems: "center",
               textAlign: "center",
               fontSize: "20px",
-              width: "fit-content",
+              width: "100%",
               p: "0px 4px",
               borderRadius: "3px",
               transition: "all 0.3s ease-in-out",
@@ -82,7 +82,7 @@ const ChannelCard = ({ channel, marginTop, marginInline, background, border, hov
               sx={{
                 fontSize: "15px",
                 fontWeight: 500,
-                color: "gray"
+                color: "gray",
               }}>
               {parseInt(channel?.statistics?.subscriberCount).toLocaleString()} subscribers.
             </Typography>
