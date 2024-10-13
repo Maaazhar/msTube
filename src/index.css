@@ -17,9 +17,9 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(114, 113, 113);
+  background-color: #727171;
   border-radius: 10px;
-  height: 200px;
+  /* height: 200px; */
 }
 
 ::-webkit-scrollbar-track {
