@@ -16,7 +16,7 @@ const SearchFeed = () => {
     <Box
       p={2}
       sx={{
-        height: "90vh",
+        height: "100%",
         flex: 2,
         overflowY: "auto"
       }}>

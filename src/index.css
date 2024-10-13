@@ -18,8 +18,7 @@ a {
 
 ::-webkit-scrollbar-thumb {
   background-color: #a6adfd;
-  border-radius: 10px;
-  /* height: 200px; */
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-track {
